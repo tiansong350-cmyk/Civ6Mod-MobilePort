@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Context>
+    <!-- Single unified tab container - all three tab XMLs are embedded here -->
+    
+    <!-- Sale Tab (ID prefix: Sale_) -->
+    <Container ID="SaleContainer" Size="parent,parent" Hidden="1">
+        <Include File="qd_popuptab_sale"/>
+    </Container>
+
+    <!-- Purchase Tab (ID prefix: Purchase_) -->
+    <Container ID="PurchaseContainer" Size="parent,parent" Hidden="1">
+        <Include File="qd_popuptab_purchase"/>
+    </Container>
+
+    <!-- Exchange Tab (ID prefix: Exchange_) -->
+    <Container ID="ExchangeContainer" Size="parent,parent" Hidden="1">
+        <Include File="qd_popuptab_exchange"/>
+    </Container>
+
+</Context>

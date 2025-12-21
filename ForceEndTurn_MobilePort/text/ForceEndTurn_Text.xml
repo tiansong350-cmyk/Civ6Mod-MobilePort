@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+  <LocalizedText>
+    <Row Tag="LOC_FORCE_END_TURN_TOOLTIP" Language="en_US">
+      <Text>Force End Turn[NEWLINE][NEWLINE]Long-press (0.8s) to immediately end your turn, even if there are pending actions.</Text>
+    </Row>
+    <Row Tag="LOC_FORCE_END_TURN_TOOLTIP" Language="zh_Hans_CN">
+      <Text>强制结束回合[NEWLINE][NEWLINE]长按(0.8秒)立即结束回合，即使有未完成的操作。</Text>
+    </Row>
+  </LocalizedText>
+</GameData>

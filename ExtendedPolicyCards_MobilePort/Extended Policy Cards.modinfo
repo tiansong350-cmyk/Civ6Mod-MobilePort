@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Extended Policy Cards - Mobile Port -->
+<!-- Original mods by Aristos (EPC) and Infixo (BRS/RMA). Ported by Song with Antigravity. -->
+<Mod id="382a187f-c8ba-4094-a6a7-0d5315661f34" version="1">
+	<Properties>
+		<Name>Extended Policy Cards (Mobile Port)</Name>
+		<Stability>Final</Stability>
+		<Teaser>Policy Cards that show effects - No dependencies!</Teaser>
+		<Description>This mod extends the Policy Cards description and adds a label at the bottom of the card to display all the relevant effects.[NEWLINE][NEWLINE][COLOR_Green]Mobile Port[ENDCOLOR] - Includes RealModifierAnalysis, NO dependency on Better Report Screen![NEWLINE][NEWLINE]Original mods by Aristos (Extended Policy Cards) and Infixo (Better Report Screen/RMA). Ported by Song with Antigravity.</Description>
+		<Authors>Aristos, Infixo (Original), Song (Mobile Port)</Authors>
+		<AffectsSavedGames>0</AffectsSavedGames>
+		<CompatibleVersions>2.0</CompatibleVersions>
+	</Properties>
+	<InGameActions>
+		<!-- Database for RMA version numbers -->
+		<UpdateDatabase id="EPC_RMA_Database">
+			<Properties><LoadOrder>1</LoadOrder></Properties>
+			<File>BetterReportScreen_Database.sql</File>
+		</UpdateDatabase>
+		<!-- Load RealModifierAnalysis FIRST (provides RMA.CalculateModifierEffect) -->
+		<AddUserInterfaces id="EPC_RMA_Load">
+			<Properties>
+				<Context>InGame</Context>
+			</Properties>
+			<File>RealModifierAnalysis.xml</File>
+		</AddUserInterfaces>
+		<!-- Then import GovernmentScreen to show policy effects -->
+		<ImportFiles id="EPC_IMPORT_FILES">
+			<Properties>
+				<LoadOrder>12000</LoadOrder>
+			</Properties>
+			<Items>
+				<File>GovernmentScreen.lua</File>
+				<File>GovernmentScreen.xml</File>
+			</Items>
+		</ImportFiles>
+	</InGameActions>
+	<Files>
+		<File>BetterReportScreen_Database.sql</File>
+		<File>RealModifierAnalysis.lua</File>
+		<File>RealModifierAnalysis.xml</File>
+		<File>GovernmentScreen.lua</File>
+		<File>GovernmentScreen.xml</File>
+	</Files>
+</Mod>

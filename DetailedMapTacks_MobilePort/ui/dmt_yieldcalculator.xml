@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Context>
+    <!-- Static Red Box for V21 Diagnostic -->
+    <Container Size="500,50" Anchor="C,T" Offset="0,100">
+        <Grid Style="DropShadow2" Size="500,50" Color="255,0,0,200" Anchor="C,C">
+            <Label ID="DebugLabel" Anchor="C,C" String="DMT V21: YieldCalculator XML LOADED" Style="FontNormal20" Color="255,255,255,255" />
+        </Grid>
+    </Container>
+</Context>

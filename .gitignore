@@ -1,0 +1,19 @@
+# 忽略不需要上传的文件夹
+dont work/
+快速交易/
+高级地图钉/
+爱思导出文件/
+Cheat Map Editor/
+BRS_Slim_RMA/
+Better_Loading_Screen_iPad/
+Extended_Policy_Cards_iPad/
+.agent/
+
+# 忽略临时文件
+*.txt
+一阶段复盘.md
+二阶段复盘.md
+代码自检模块库.md
+全局协议精简版.md
+协议v4.0补充条款.md
+AI协作效率优化协议.md

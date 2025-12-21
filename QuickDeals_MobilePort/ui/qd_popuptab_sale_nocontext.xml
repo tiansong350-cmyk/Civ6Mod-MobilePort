@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file is now included by qd_alltabs.xml, not loaded as independent Context -->
+<!-- DO NOT use <Context> tag to avoid creating independent LuaContext -->
+<Include File="qd_instances"/>
+
+<!-- Containers for caching instances -->
+<Container ID="LeftRightListContainer" Hidden="1"/>
+
+<Container Size="parent,parent">
+
+    <!-- Dynamic: Inventory area-->
+    <Container ID="MyInventory" Size="210,parent" Anchor="L,T">
+        <ScrollPanel ID="MyInventoryScroll"	Size="parent, parent" Vertical="1" AutoScollbar="1" InnerPadding="39,0">
+            <ScrollBar Size="12,parent" SliceTextureSize="11,11" SliceCorner="5,5" Anchor="R,B" Color="111,101,94,250" Offset="-19,0" AnchorSide="I,I" Texture="Controls_ScrollBarBacking" StateOffsetIncrement="0,0" Vertical="1" >
+                <Thumb Size="10,10" Texture="Controls_ScrollBarHandleV_Brown" StateOffsetIncrement="0,0" SliceCorner="6,6" SliceTextureSize="13,13"/>
+            </ScrollBar>
+            <!-- 56 per icon, 3 items per row. -->
+            <Stack ID="MyInventoryStack" StackGrowth="Right" WrapWidth="170" WrapGrowth="Bottom" Offset="0,10"/>
+        </ScrollPanel>
+        <Label ID="NoAvailableItemLabel" Anchor="C,T" Offset="0,180" Align="center" Style="FontFlair20" WrapWidth="180" SmallCapsType="EveryWord" SmallCaps="26" String="{LOC_DIPLO_DEAL_NO_AVAILABLE_ITEMS:upper}" Color="200,200,200,255"/>
+    </Container>
+
+    <!-- (rest of the Sale tab XML content continues...) -->
+    <!-- I'll need to copy the full content, but removing the Context wrapper -->

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Force End Turn V10 - 固定位置和样式 -->
+<Context Name="FetCtx">
+	<Container ID="FetContentContainer" Anchor="R,T" Offset="0,0" Size="auto,auto">
+		<!-- 按钮Container - 会被Lua移动到TopPanel -->
+		<Container ID="FetLaunchBarBtnCont" Anchor="R,T" Offset="0,0" Size="48,auto" ConsumeMouse="1">
+			<!-- 使用纯Button不带任何动画效果 -->
+			<Button ID="FetLaunchBarBtn" Anchor="C,C" Size="29,29" 
+					ToolTip="Click to force end turn" ConsumeMouse="1">
+				<Label Anchor="C,C" Offset="0,0" Style="TopBarMeta" String="SE"/>
+			</Button>
+		</Container>
+	</Container>
+</Context>

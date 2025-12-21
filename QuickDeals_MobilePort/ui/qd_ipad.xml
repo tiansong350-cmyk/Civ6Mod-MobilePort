@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Context>
+    <Include File="qd_instances"/>
+
+    <!-- Single unified UI for all three tabs - iPad optimized -->
+    <Container Size="parent,parent">
+        
+        <!-- Sale Tab Content -->
+        <Container ID="SaleContent" Size="parent,parent" Hidden="1">
+            <!-- Player inventory on left -->
+            <Container ID="Sale_MyInventory" Size="210,parent" Anchor="L,T">
+                <ScrollPanel ID="Sale_MyInventoryScroll" Size="parent,parent" Vertical="1" AutoScollbar="1" InnerPadding="39,0">
+                    <ScrollBar Size="12,parent" SliceTextureSize="11,11" SliceCorner="5,5" Anchor="R,B" Color="111,101,94,250" Offset="-19,0" AnchorSide="I,I" Texture="Controls_ScrollBarBacking" StateOffsetIncrement="0,0" Vertical="1">
+                        <Thumb Size="10,10" Texture="Controls_ScrollBarHandleV_Brown" StateOffsetIncrement="0,0" SliceCorner="6,6" SliceTextureSize="13,13"/>
+                    </ScrollBar>
+                    <Stack ID="Sale_MyInventoryStack" StackGrowth="Right" WrapWidth="170" WrapGrowth="Bottom" Offset="0,10"/>
+                </ScrollPanel>
+                <Label ID="Sale_NoAvailableItemLabel" Anchor="C,T" Offset="0,180" Align="center" Style="FontFlair20" WrapWidth="180" String="{LOC_DIPLO_DEAL_NO_AVAILABLE_ITEMS:upper}" Color="200,200,200,255"/>
+            </Container>
+
+            <!-- Player offer area in middle -->
+            <Container ID="Sale_MyOffer" Size="210,parent" Anchor="L,T" Offset="210,0">
+                <ScrollPanel ID="Sale_MyOfferScroll" Size="parent,parent" Vertical="1" AutoScollbar="1">
+                    <ScrollBar Size="12,parent" SliceTextureSize="11,11" SliceCorner="5,5" Anchor="R,B" Color="111,101,94,250" Offset="0,0" AnchorSide="I,I" Texture="Controls_ScrollBarBacking" StateOffsetIncrement="0,0" Vertical="1">
+                        <Thumb Size="10,10" Texture="Controls_ScrollBarHandleV_Brown" StateOffsetIncrement="0,0" SliceCorner="6,6" SliceTextureSize="13,13"/>
+                    </ScrollBar>
+                </ScrollPanel>
+            </Container>
+
+            <!-- Filters and AI offers on right -->
+            <Container ID="Sale_Filters" Size="480,24" Anchor="R,T" Offset="0,10">
+                <Stack ID="Sale_ItemTypeContainer" StackGrowth="Right" Anchor="L,C" Offset="10,0">
+                    <Label Anchor="L,C" Style="BodyText16" String="LOC_REPORTS_SORT_TYPE"/>
+                    <PullDown Anchor="L,C" ID="Sale_ItemTypeFilter" Style="PullDownBlue" Size="150,24" Offset="5,0"/>
+                    <PullDown Anchor="L,C" ID="Sale_SubTypeFilter" Style="PullDownBlue" Size="120,24" Offset="5,0" Hidden="1"/>
+                </Stack>
+                <Stack StackGrowth="Right" Anchor="R,C" Offset="10,0">
+                    <Label Anchor="L,C" Style="BodyText16" String="LOC_REPORTS_SORT_BY" Offset="10,0"/>
+                    <PullDown Anchor="L,C" ID="Sale_SortByFilter" Style="PullDownBlue" Size="100,24" Offset="5,0"/>
+                </Stack>
+            </Container>
+
+            <Container ID="Sale_AIOffers" Size="480,parent-40" Anchor="R,T" Offset="0,40">
+                <ScrollPanel ID="Sale_AIOffersScroll" Size="parent,parent" Vertical="1" AutoScollbar="1" InnerPadding="20,0">
+                    <ScrollBar Size="12,parent" SliceTextureSize="11,11" SliceCorner="5,5" Anchor="L,B" Color="111,101,94,250" Offset="-8,0" AnchorSide="I,I" Texture="Controls_ScrollBarBacking" StateOffsetIncrement="0,0" Vertical="1">
+                        <Thumb Size="10,10" Texture="Controls_ScrollBarHandleV_Brown" StateOffsetIncrement="0,0" SliceCorner="6,6" SliceTextureSize="13,13"/>
+                    </ScrollBar>
+                    <Stack StackGrowth="Bottom">
+                        <Grid ID="Sale_RecommendLabelContainer" Style="ColumnHeader" Size="440,26" Offset="10,0" Anchor="L,T" Color="GrayMedium">
+                            <Label ID="Sale_RecommendLabel" Anchor="C,C" Style="HeaderSmallCaps" String="{LOC_RECOMMENDED:upper}"/>
+                        </Grid>
+                        <Stack ID="Sale_AIOffersStack" StackGrowth="Bottom"/>
+                    </Stack>
+                </ScrollPanel>
+                <Label ID="Sale_FetchingDealLabel" Anchor="C,T" Offset="0,150" Align="center" Style="FontFlair20" String="{LOC_LOADING_PLEASE_WAIT:upper}" Color="200,200,200,255" Hidden="1"/>
+                <Label ID="Sale_NoAvailableDealLabel" Anchor="C,T" Offset="0,150" Align="center" Style="FontFlair20" String="{LOC_QD_NO_AVAILABLE_DEAL:upper}" Color="200,200,200,255" Hidden="1"/>
+            </Container>
+        </Container>
+
+        <!-- Purchase Tab Content -->
+        <Container ID="PurchaseContent" Size="parent,parent" Hidden="1">
+            <Stack StackGrowth="Bottom" Size="900,parent" Anchor="C,T">
+                <Container ID="Purchase_Filters" Size="auto,24" Offset="0,10">
+                    <Stack StackGrowth="Right">
+                        <Label Anchor="L,C" Style="BodyText16" String="LOC_REPORTS_SORT_TYPE"/>
+                        <PullDown Anchor="L,C" ID="Purchase_ItemTypeFilter" Style="PullDownBlue" Size="150,24" Offset="5,0"/>
+                        <Label Anchor="L,C" Style="BodyText16" String="LOC_REPORTS_SORT_BY" Offset="20,0"/>
+                        <PullDown Anchor="L,C" ID="Purchase_SortByFilter" Style="PullDownBlue" Size="150,24" Offset="5,0"/>
+                    </Stack>
+                </Container>
+
+                <Container ID="Purchase_OfferPanel" Size="parent,parent-50" Anchor="L,T" Offset="0,10" InnerPadding="10,0">
+                    <ScrollPanel ID="Purchase_OffersScroll" Size="parent,parent" Vertical="1" AutoScollbar="1">
+                        <ScrollBar Size="12,parent" SliceTextureSize="11,11" SliceCorner="5,5" Anchor="L,B" Color="111,101,94,250" Offset="0,0" AnchorSide="I,I" Texture="Controls_ScrollBarBacking" StateOffsetIncrement="0,0" Vertical="1">
+                            <Thumb Size="10,10" Texture="Controls_ScrollBarHandleV_Brown" StateOffsetIncrement="0,0" SliceCorner="6,6" SliceTextureSize="13,13"/>
+                        </ScrollBar>
+                        <Stack ID="Purchase_AIOffersStack" StackGrowth="Bottom" Anchor="C,T"/>
+                    </ScrollPanel>
+                    <Label ID="Purchase_FetchingDealLabel" Anchor="C,T" Offset="0,150" Align="center" Style="FontFlair20" String="{LOC_LOADING_PLEASE_WAIT:upper}" Color="200,200,200,255" Hidden="1"/>
+                    <Label ID="Purchase_NoAvailableDealLabel" Anchor="C,T" Offset="0,150" Align="center" Style="FontFlair20" String="{LOC_QD_NO_AVAILABLE_DEAL:upper}" Color="200,200,200,255" Hidden="1"/>
+                </Container>
+            </Stack>
+        </Container>
+
+        <!-- Exchange Tab Content -->
+        <Container ID="ExchangeContent" Size="parent,parent" Hidden="1">
+            <Stack StackGrowth="Bottom" Size="900,parent" Anchor="C,T">
+                <Container ID="Exchange_Filters" Size="auto,24" Offset="0,10">
+                    <Stack StackGrowth="Right">
+                        <Label Anchor="L,C" Style="BodyText16" String="LOC_QD_YOU_NEED"/>
+                        <PullDown Anchor="L,C" ID="Exchange_GoldTypeFilter" Style="PullDownBlue" Size="150,24" Offset="5,0"/>
+                        <Label Anchor="L,C" Style="BodyText16" String="LOC_REPORTS_SORT_BY" Offset="20,0"/>
+                        <PullDown Anchor="L,C" ID="Exchange_SortByFilter" Style="PullDownBlue" Size="150,24" Offset="5,0"/>
+                    </Stack>
+                </Container>
+
+                <Container ID="Exchange_OfferPanel" Size="parent,parent-50" Anchor="L,T" Offset="0,10" InnerPadding="10,0">
+                    <ScrollPanel ID="Exchange_OffersScroll" Size="parent,parent" Vertical="1" AutoScollbar="1">
+                        <ScrollBar Size="12,parent" SliceTextureSize="11,11" SliceCorner="5,5" Anchor="L,B" Color="111,101,94,250" Offset="0,0" AnchorSide="I,I" Texture="Controls_ScrollBarBacking" StateOffsetIncrement="0,0" Vertical="1">
+                            <Thumb Size="10,10" Texture="Controls_ScrollBarHandleV_Brown" StateOffsetIncrement="0,0" SliceCorner="6,6" SliceTextureSize="13,13"/>
+                        </ScrollBar>
+                        <Stack ID="Exchange_AIOffersStack" StackGrowth="Bottom" Anchor="C,T"/>
+                    </ScrollPanel>
+                    <Label ID="Exchange_FetchingDealLabel" Anchor="C,T" Offset="0,150" Align="center" Style="FontFlair20" String="{LOC_LOADING_PLEASE_WAIT:upper}" Color="200,200,200,255" Hidden="1"/>
+                    <Label ID="Exchange_NoAvailableDealLabel" Anchor="C,T" Offset="0,150" Align="center" Style="FontFlair20" String="{LOC_QD_NO_AVAILABLE_DEAL:upper}" Color="200,200,200,255" Hidden="1"/>
+                </Container>
+            </Stack>
+        </Container>
+
+    </Container>
+</Context>

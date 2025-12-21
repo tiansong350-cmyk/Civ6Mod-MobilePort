@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Force End Turn V9 -->
+<Mod id="f3e8d7c6-b5a4-9382-1fed-cba098765432" version="1">
+  <Properties>
+    <Name>Force End Turn (Mobile Port)</Name>
+    <Authors>Song</Authors>
+    <Teaser>Click SE to force end turn.</Teaser>
+    <Description>Adds SE button to top bar. Click to skip pending actions and end turn.</Description>
+    <AffectsSavedGames>0</AffectsSavedGames>
+    <CompatibleVersions>1.2,2.0</CompatibleVersions>
+  </Properties>
+  <InGameActions>
+    <AddUserInterfaces id="FetUI">
+      <Properties>
+        <Context>InGame</Context>
+      </Properties>
+      <File>ui/ForceEndTurnButton.xml</File>
+    </AddUserInterfaces>
+  </InGameActions>
+  <Files>
+    <File>ui/ForceEndTurnButton.xml</File>
+    <File>ui/ForceEndTurnButton.lua</File>
+  </Files>
+</Mod>
