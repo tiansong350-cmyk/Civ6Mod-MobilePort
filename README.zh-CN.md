@@ -28,6 +28,35 @@ PC版文明6 mod的移动端（主要是iPad）移植版本。
 **iPad mod目录位置**：  
 `文件 → 我的iPad → Civilization VI → Mods`
 
+### 📹 视频教程
+- [B站 - iPad Mod安装教程](https://www.bilibili.com/video/BV1shv6eqEqf/)
+
+### 📖 详细图文教程
+详细安装步骤可参考贴吧用户 **Toringel** 的[教程帖](https://tieba.baidu.com/p/5491508467)。
+
+**关键步骤摘要**：
+1. 用数据线连接iPad到电脑，使用iTunes/iTools/爱思助手
+2. 找到Civ VI应用 → 文件共享 → Mods文件夹
+3. 导入mod文件夹
+4. 如果领袖mod图片不显示：将`Platforms/Windows`文件夹内容复制到`Platforms/iOS`（i小写，OS大写）
+
+---
+
+## 🔗 更多Mod下载
+
+**文明6 Mod下载网站**：  
+[SMods 文明6目录](https://catalogue.smods.ru/archives/category/mod?app=289070) - 非常全面的Civ6 mod合集
+
+---
+
+## ⚠️ PC Mod在iPad上的兼容性
+
+| Mod类型 | 兼容性 |
+|---------|--------|
+| **非UI类mod**（作弊菜单、地图编辑器等） | ✅ 通常可以直接使用 |
+| **涉及UI修改的mod** | ⚠️ 不一定能用，需要测试 |
+| **领袖/文明mod** | ⚠️ 可以加载但图片可能不显示（参考上方教程修复） |
+
 ---
 
 ## 🎮 Mod 详情

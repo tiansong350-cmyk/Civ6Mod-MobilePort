@@ -28,6 +28,35 @@ PC Civilization VI mods ported to mobile (mainly iPad).
 **iPad mod directory**:  
 `Files → On My iPad → Civilization VI → Mods`
 
+### 📹 Video Tutorial (Chinese)
+- [Bilibili - iPad Mod Installation Guide](https://www.bilibili.com/video/BV1shv6eqEqf/)
+
+### 📖 Detailed Tutorial
+For detailed installation steps, see this [Tieba Tutorial](https://tieba.baidu.com/p/5491508467) by user **Toringel**.
+
+**Key steps summary**:
+1. Connect iPad to PC with iTunes/iTools/iFunBox
+2. Navigate to Civ VI app → File Sharing → Mods folder
+3. Import the mod folder
+4. For leader mods with missing images: copy `Platforms/Windows` folder content to `Platforms/iOS` (i lowercase, OS uppercase)
+
+---
+
+## 🔗 More Mods
+
+**Civ6 Mod Download Site**:  
+[SMods Civ6 Catalogue](https://catalogue.smods.ru/archives/category/mod?app=289070) - Comprehensive collection of Civ6 mods
+
+---
+
+## ⚠️ PC Mod Compatibility on iPad
+
+| Mod Type | Compatibility |
+|----------|---------------|
+| **Non-UI mods** (Cheat Menu, Map Editor, etc.) | ✅ Usually works directly |
+| **UI-modifying mods** | ⚠️ May or may not work, needs testing |
+| **Leader/Civilization mods** | ⚠️ Works but images may not display (see tutorial above for fix) |
+
 ---
 
 ## 🎮 Mod Details
